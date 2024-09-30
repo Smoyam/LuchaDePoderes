@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x, y, Lucia)) {
+            <string>if (place_meeting(x, y, LuciaObj)) {
     image_index = 0;
     with (Litera2Obj) {
         image_index = 0;
@@ -77,7 +77,7 @@
 }
 
 with (Habitacion2) {
-    if (place_meeting(x, y-40, Lucia)) {
+    if (place_meeting(x, y-40, LuciaObj)) {
         with (Habitacion3) {
             image_alpha = 0;
         }

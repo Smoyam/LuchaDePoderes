@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x, y-40, Lucia)) {
+            <string>if (place_meeting(x, y-40, LuciaObj)) {
     image_index = 0;
     // Borrar personajes
     with (JoseJavier) {image_alpha = 0.25;}

@@ -15,14 +15,7 @@
     <sound>sound\pisada2</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\Parado_S</sprite>
-    <sprite>sprites\Parado_W</sprite>
-    <sprite>sprites\Parado_A</sprite>
-    <sprite>sprites\Parado_D</sprite>
-    <sprite>sprites\Andar_S</sprite>
-    <sprite>sprites\Andar_W</sprite>
-    <sprite>sprites\Andar_A</sprite>
-    <sprite>sprites\Andar_D</sprite>
+    <sprite>sprites\LuciaSpr</sprite>
     <sprite>sprites\Escenario1</sprite>
     <sprite>sprites\Escenario2</sprite>
     <sprite>sprites\Escenario3</sprite>
@@ -46,6 +39,8 @@
       <sprite>sprites\caraAngie</sprite>
     </sprites>
     <sprite>sprites\CuadroTexto</sprite>
+    <sprite>sprites\Prueba</sprite>
+    <sprite>sprites\SueloSpr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Fondo</background>
@@ -55,7 +50,7 @@
     <font>fonts\TextosFonts</font>
   </fonts>
   <objects name="objects">
-    <object>objects\Lucia</object>
+    <object>objects\LuciaObj</object>
     <object>objects\JoseJavier</object>
     <object>objects\Corsi</object>
     <object>objects\Angie</object>
@@ -76,8 +71,11 @@
     <object>objects\Textos</object>
     <object>objects\Caras</object>
     <object>objects\CuadroTextoObj</object>
+    <object>objects\PruebaObj</object>
+    <object>objects\SueloObj</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\roomPrueba</room>
     <room>rooms\room0</room>
   </rooms>
   <help>

@@ -69,7 +69,7 @@ textoAngie_1 = "ZzZzZz"
             <kind>1</kind>
             <string>// Variable para el número de letras a mostrar
 if (keyboard_check_released(ord("A")) &amp;&amp; cuadrosCreados == false)  {
-    if (position_meeting(312,208,Lucia) || (position_meeting(112,224,Lucia)) || position_meeting(664,336,Lucia)) {
+    if (position_meeting(312,208,LuciaObj) || (position_meeting(112,224,LuciaObj)) || position_meeting(664,336,LuciaObj)) {
         mostrar_texto = true;  // Activa la bandera para mostrar el texto
         letras_mostradas = 0;  // Inicializa el número de letras mostradas
     }
@@ -79,14 +79,14 @@ if (keyboard_check_released(ord("A")) &amp;&amp; cuadrosCreados == false)  {
     cuadrosCreados = false;
     with (Caras) {instance_destroy();}
     with (CuadroTextoObj) {instance_destroy();}
-    if (position_meeting(112,224,Lucia)) {
+    if (position_meeting(112,224,LuciaObj)) {
         estadoDialogo += 1;
     }
 }
 
 if (mostrar_texto) {
     //JOSE JAVIER 1
-    if (position_meeting(312,208,Lucia)) {
+    if (position_meeting(312,208,LuciaObj)) {
         // Incrementa las letras mostradas gradualmente
         if (letras_mostradas &lt; string_length(textoJoseJavier_1)) {
             letras_mostradas += 1.0; // Ajusta este valor para controlar la velocidad
@@ -102,7 +102,7 @@ if (mostrar_texto) {
             audio_play_sound(dialogoM0, 1, false);
         }
     // CORSI
-    } else if (position_meeting(112,224,Lucia)) &amp;&amp; (estadoDialogo &lt; 5) {
+    } else if (position_meeting(112,224,LuciaObj)) &amp;&amp; (estadoDialogo &lt; 5) {
         if (estadoDialogo == 0) {
             // Incrementa las letras mostradas gradualmente
             if (letras_mostradas &lt; string_length(textoCorsi_1)) {
@@ -152,7 +152,7 @@ if (mostrar_texto) {
                 audio_play_sound(dialogoF0, 1, false);
             }
         }       
-    } else if (position_meeting(664,336,Lucia)) {
+    } else if (position_meeting(664,336,LuciaObj)) {
         // Incrementa las letras mostradas gradualmente
         if (letras_mostradas &lt; string_length(textoAngie_1)) {
             letras_mostradas += 1.0; // Ajusta este valor para controlar la velocidad
@@ -195,21 +195,21 @@ if (mostrar_texto) {
     draw_set_font(TextosFonts);  // Usa la fuente que creaste    
     
     // JOSE JAVIER
-    if (position_meeting(312,208,Lucia)) {
+    if (position_meeting(312,208,LuciaObj)) {
         var texto_parcial = string_copy(textoJoseJavier_1, 1, floor(letras_mostradas));
     // CORSI
-    } else if (position_meeting(112,224,Lucia)) &amp;&amp; (estadoDialogo == 0) {
+    } else if (position_meeting(112,224,LuciaObj)) &amp;&amp; (estadoDialogo == 0) {
         var texto_parcial = string_copy(textoCorsi_1, 1, floor(letras_mostradas));
-    } else if (position_meeting(112,224,Lucia)) &amp;&amp; (estadoDialogo == 1) {
+    } else if (position_meeting(112,224,LuciaObj)) &amp;&amp; (estadoDialogo == 1) {
         var texto_parcial = string_copy(textoLucia_1, 1, floor(letras_mostradas));
-    } else if (position_meeting(112,224,Lucia)) &amp;&amp; (estadoDialogo == 2) {
+    } else if (position_meeting(112,224,LuciaObj)) &amp;&amp; (estadoDialogo == 2) {
         var texto_parcial = string_copy(textoCorsi_2, 1, floor(letras_mostradas));
-    } else if (position_meeting(112,224,Lucia)) &amp;&amp; (estadoDialogo == 3) {
+    } else if (position_meeting(112,224,LuciaObj)) &amp;&amp; (estadoDialogo == 3) {
         var texto_parcial = string_copy(textoCorsi_3, 1, floor(letras_mostradas));
-    } else if (position_meeting(112,224,Lucia)) &amp;&amp; (estadoDialogo == 4) {
+    } else if (position_meeting(112,224,LuciaObj)) &amp;&amp; (estadoDialogo == 4) {
         var texto_parcial = string_copy(textoLucia_2, 1, floor(letras_mostradas));
     // ANGIE
-    } else if (position_meeting(664,336,Lucia)) {
+    } else if (position_meeting(664,336,LuciaObj)) {
         var texto_parcial = string_copy(textoAngie_1, 1, floor(letras_mostradas));
     } else {
         var texto_parcial = " ";

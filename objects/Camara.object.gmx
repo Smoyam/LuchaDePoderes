@@ -29,8 +29,8 @@
 var margin_y = 150; // Margen vertical de seguimiento
 
 // Obtener la posición de Lucia
-var target_x = Lucia.x;
-var target_y = Lucia.y;
+var target_x = LuciaObj.x;
+var target_y = LuciaObj.y;
 
 // Ajustar la vista para seguir a Lucia con márgenes
 if (abs(view_xview[0] + view_wview[0] / 2 - target_x) &gt; margin_x) {

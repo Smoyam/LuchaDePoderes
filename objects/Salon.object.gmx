@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (place_meeting(x, y, Lucia)) {
+            <string>if (place_meeting(x, y, LuciaObj)) {
     image_index = 0;
     with (MesaObj) {
         image_index = 0;
@@ -65,7 +65,7 @@
 }
 
 with (Cocina) {
-    if (place_meeting(x, y-40, Lucia)) {
+    if (place_meeting(x, y-40, LuciaObj)) {
         with (Salon) {
             image_alpha = 0.25;
         }
