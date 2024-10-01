@@ -7,8 +7,8 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>18</bbox_left>
-  <bbox_right>43</bbox_right>
+  <bbox_left>13</bbox_left>
+  <bbox_right>46</bbox_right>
   <bbox_top>8</bbox_top>
   <bbox_bottom>54</bbox_bottom>
   <HTile>0</HTile>
@@ -65,5 +65,20 @@
     <frame index="42">images\LuciaSpr_42.png</frame>
     <frame index="43">images\LuciaSpr_43.png</frame>
     <frame index="44">images\LuciaSpr_44.png</frame>
+    <frame index="45">images\LuciaSpr_45.png</frame>
+    <frame index="46">images\LuciaSpr_46.png</frame>
+    <frame index="47">images\LuciaSpr_47.png</frame>
+    <frame index="48">images\LuciaSpr_48.png</frame>
+    <frame index="49">images\LuciaSpr_49.png</frame>
+    <frame index="50">images\LuciaSpr_50.png</frame>
+    <frame index="51">images\LuciaSpr_51.png</frame>
+    <frame index="52">images\LuciaSpr_52.png</frame>
+    <frame index="53">images\LuciaSpr_53.png</frame>
+    <frame index="54">images\LuciaSpr_54.png</frame>
+    <frame index="55">images\LuciaSpr_55.png</frame>
+    <frame index="56">images\LuciaSpr_56.png</frame>
+    <frame index="57">images\LuciaSpr_57.png</frame>
+    <frame index="58">images\LuciaSpr_58.png</frame>
+    <frame index="59">images\LuciaSpr_59.png</frame>
   </frames>
 </sprite>

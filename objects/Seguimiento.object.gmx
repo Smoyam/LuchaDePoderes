@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.25;
-velocidad = 4;
+            <string>image_speed = 0;
 resetAnima = 0;
 pisadas = 0;
 </string>
@@ -51,74 +50,50 @@ pisadas = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// MOVERSE AL SUR
-if (keyboard_check(vk_down)==1) &amp;&amp; (keyboard_check(vk_up)==0) &amp;&amp; (keyboard_check(vk_left)==0) &amp;&amp; (keyboard_check(vk_right)==0) {
-    vspeed = velocidad;
-    hspeed = 0;
-    global.movJugador = 4;
+            <string>// Posición del personaje que sigue
+var distancia = 20; // Distancia a la que debe estar el personaje que sigue
+var ajuste = 2;
+
+// global.movJugador
+// Stop S: 0
+// Stop W: 1
+// Stop A: 2
+// Stop D: 3
+// Move S: 4
+// Move W: 5
+// Move A: 6
+// Move D: 7
+// Move SA:8
+// Move SD:9
+// Move WA:10
+// Move WD:11
+
+// Seguir al maestro
+if ((y - LuciaObj.y) &gt; distancia) {
+    y = LuciaObj.y + distancia;
+} else if ((y - LuciaObj.y) &lt; -distancia) {
+    y = LuciaObj.y - distancia;
+}
+if ((x - LuciaObj.x) &gt; distancia) {
+    x = LuciaObj.x + distancia;
+} else if ((x - LuciaObj.x) &lt; -distancia) {
+    x = LuciaObj.x - distancia;
+}
+
+// Poco a poco alinearse
+if ((y - LuciaObj.y) &gt; 0) &amp;&amp; (global.movJugador &gt; 3) {
+    y -= ajuste;
     pisadas += 1;
-// MOVERSE AL NORTE
-} else if (keyboard_check(vk_down)==0) &amp;&amp; (keyboard_check(vk_up)==1) &amp;&amp; (keyboard_check(vk_left)==0) &amp;&amp; (keyboard_check(vk_right)==0) {
-    vspeed = -velocidad;
-    hspeed = 0;
-    global.movJugador = 5;
+} else if ((y - LuciaObj.y) &lt; 0) &amp;&amp; (global.movJugador &gt; 3) {
+    y += ajuste;
     pisadas += 1;
-// MOVERSE AL OESTE
-} else if (keyboard_check(vk_down)==0) &amp;&amp; (keyboard_check(vk_up)==0) &amp;&amp; (keyboard_check(vk_left)==1) &amp;&amp; (keyboard_check(vk_right)==0) {
-    vspeed = 0;
-    hspeed = -velocidad;
-    global.movJugador = 6;
+}
+if ((x - LuciaObj.x) &gt; 0) &amp;&amp; (global.movJugador &gt; 3) {
+    x -= ajuste;
     pisadas += 1;
-// MOVERSE AL ESTE
-} else if (keyboard_check(vk_down)==0) &amp;&amp; (keyboard_check(vk_up)==0) &amp;&amp; (keyboard_check(vk_left)==0) &amp;&amp; (keyboard_check(vk_right)==1) {
-    vspeed = 0;
-    hspeed = velocidad;
-    global.movJugador = 7;
+} else if ((x - LuciaObj.x) &lt; 0) &amp;&amp; (global.movJugador &gt; 3) {
+    x += ajuste;
     pisadas += 1;
-// MOVERSE AL SUROESTE
-} else if (keyboard_check(vk_down)==1) &amp;&amp; (keyboard_check(vk_up)==0) &amp;&amp; (keyboard_check(vk_left)==1) &amp;&amp; (keyboard_check(vk_right)==0) {
-    vspeed = velocidad*0.707;
-    hspeed = -velocidad*0.707;
-    global.movJugador = 8;
-    pisadas += 1;
-// MOVERSE AL SURESTE
-} else if (keyboard_check(vk_down)==1) &amp;&amp; (keyboard_check(vk_up)==0) &amp;&amp; (keyboard_check(vk_left)==0) &amp;&amp; (keyboard_check(vk_right)==1) {
-    vspeed = velocidad*0.707;
-    hspeed = velocidad*0.707;
-    global.movJugador = 9;
-    pisadas += 1;
-// MOVERSE AL NOROESTE
-} else if (keyboard_check(vk_down)==0) &amp;&amp; (keyboard_check(vk_up)==1) &amp;&amp; (keyboard_check(vk_left)==1) &amp;&amp; (keyboard_check(vk_right)==0) {
-    vspeed = -velocidad*0.707;
-    hspeed = -velocidad*0.707;
-    global.movJugador = 10;
-    pisadas += 1;
-// MOVERSE AL NORESTE
-} else if (keyboard_check(vk_down)==0) &amp;&amp; (keyboard_check(vk_up)==1) &amp;&amp; (keyboard_check(vk_left)==0) &amp;&amp; (keyboard_check(vk_right)==1) {
-    vspeed = -velocidad*0.707;
-    hspeed = velocidad*0.707;
-    global.movJugador = 11;
-    pisadas += 1;
-// PARADO EN SUR
-} else if (global.movJugador == 4) || (global.movJugador == 8) || (global.movJugador == 9) {
-    vspeed = 0;
-    hspeed = 0;
-    global.movJugador = 0;
-// PARADO EN NORTE
-} else if (global.movJugador == 5) || (global.movJugador == 10) || (global.movJugador == 11)  {
-    vspeed = 0;
-    hspeed = 0;
-    global.movJugador = 1;
-// PARADO EN OESTE
-} else if (global.movJugador == 6) {
-    vspeed = 0;
-    hspeed = 0;
-    global.movJugador = 2;
-// PARADO EN ESTE
-} else if (global.movJugador == 7) {
-    vspeed = 0;
-    hspeed = 0;
-    global.movJugador = 3;
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -192,13 +167,22 @@ if ((global.movJugador == 0) &amp;&amp; (resetAnima == 0)) {
     resetAnima = 0;
 }
 
-if (pisadas == 10) {
+if (pisadas == 5) {
     audio_play_sound(pisada1, 0, false);
     pisadas += 1;
-} else if (pisadas == 20) {
+} else if (pisadas == 15) {
     audio_play_sound(pisada2, 0, false);
     pisadas = 0;
 }
+
+// CORREGIR QUIEN SE DIBUJA DELANTE
+if y &gt;= LuciaObj.y {
+    depth = -1;
+    with (LuciaObj) { depth = 0; }
+} else {
+    depth = 0;
+    with (LuciaObj) { depth = -1; }
+}    
 </string>
           </argument>
         </arguments>

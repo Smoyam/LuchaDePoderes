@@ -41,6 +41,7 @@
     <sprite>sprites\CuadroTexto</sprite>
     <sprite>sprites\Prueba</sprite>
     <sprite>sprites\SueloSpr</sprite>
+    <sprite>sprites\BorrachoSpr</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\Fondo</background>
@@ -73,8 +74,10 @@
     <object>objects\CuadroTextoObj</object>
     <object>objects\PruebaObj</object>
     <object>objects\SueloObj</object>
+    <object>objects\Seguimiento</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\roomPreInicio</room>
     <room>rooms\roomPrueba</room>
     <room>rooms\room0</room>
   </rooms>
