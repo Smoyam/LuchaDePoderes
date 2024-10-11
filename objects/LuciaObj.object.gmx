@@ -199,6 +199,20 @@ if (pisadas == 10) {
     audio_play_sound(pisada2, 0, false);
     pisadas = 0;
 }
+
+if (room == roomCiudad1) {
+    velocidad = 6;
+} else {
+    velocidad = 4;
+}
+
+if ((position_meeting(x,y,WarpObj)) &amp;&amp; (room = room0)) &amp;&amp; keyboard_check_released(ord("A")) {
+    room_goto(roomCiudad1);
+    audio_stop_all();
+} else if ((position_meeting(x,y,WarpObj)) &amp;&amp; (room = roomCiudad1)) &amp;&amp; keyboard_check_released(ord("A")) {
+    room_goto(room0);
+    audio_stop_all();
+}
 </string>
           </argument>
         </arguments>

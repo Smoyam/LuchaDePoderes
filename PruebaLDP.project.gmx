@@ -13,48 +13,61 @@
     <sound>sound\dialogoF1</sound>
     <sound>sound\pisada1</sound>
     <sound>sound\pisada2</sound>
+    <sound>sound\musicaCiudad</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\LuciaSpr</sprite>
-    <sprite>sprites\Escenario1</sprite>
-    <sprite>sprites\Escenario2</sprite>
-    <sprite>sprites\Escenario3</sprite>
-    <sprite>sprites\Escenario4</sprite>
-    <sprite>sprites\Escenario5</sprite>
-    <sprite>sprites\Mesa</sprite>
-    <sprite>sprites\Mesita</sprite>
-    <sprite>sprites\Mesita2</sprite>
-    <sprite>sprites\Ropero</sprite>
-    <sprite>sprites\Litera1</sprite>
-    <sprite>sprites\Litera2</sprite>
-    <sprite>sprites\Cama</sprite>
-    <sprite>sprites\AngieDormir</sprite>
-    <sprite>sprites\CorsiLeer</sprite>
-    <sprite>sprites\JoseJavierEsperar</sprite>
+    <sprites name="Escenario1">
+      <sprite>sprites\Escenario1</sprite>
+      <sprite>sprites\Escenario2</sprite>
+      <sprite>sprites\Escenario3</sprite>
+      <sprite>sprites\Escenario4</sprite>
+      <sprite>sprites\Escenario5</sprite>
+      <sprite>sprites\Mesa</sprite>
+      <sprite>sprites\Mesita</sprite>
+      <sprite>sprites\Ropero</sprite>
+      <sprite>sprites\Litera1</sprite>
+      <sprite>sprites\Litera2</sprite>
+      <sprite>sprites\Cama</sprite>
+      <sprite>sprites\Mesita2</sprite>
+    </sprites>
+    <sprites name="Escenario2">
+      <sprite>sprites\Azotea1Spr</sprite>
+      <sprite>sprites\Azotea2Spr</sprite>
+      <sprite>sprites\Azotea3Spr</sprite>
+      <sprite>sprites\Azotea4Spr</sprite>
+      <sprite>sprites\Azotea5Spr</sprite>
+      <sprite>sprites\Ciudad1Spr</sprite>
+    </sprites>
     <sprite>sprites\Invisible</sprite>
+    <sprite>sprites\InvisibleWarp</sprite>
+    <sprite>sprites\CuadroTexto</sprite>
+    <sprite>sprites\SueloSpr</sprite>
     <sprites name="Caras">
       <sprite>sprites\caraLucia</sprite>
       <sprite>sprites\caraJoseJavier</sprite>
       <sprite>sprites\caraCorsi</sprite>
       <sprite>sprites\caraAngie</sprite>
     </sprites>
-    <sprite>sprites\CuadroTexto</sprite>
-    <sprite>sprites\Prueba</sprite>
-    <sprite>sprites\SueloSpr</sprite>
-    <sprite>sprites\BorrachoSpr</sprite>
+    <sprites name="Movimiento">
+      <sprite>sprites\LuciaSpr</sprite>
+      <sprite>sprites\BorrachoSpr</sprite>
+      <sprite>sprites\AngieDormir</sprite>
+      <sprite>sprites\CorsiLeer</sprite>
+      <sprite>sprites\JoseJavierEsperar</sprite>
+    </sprites>
+    <sprites name="Peleas">
+      <sprite>sprites\Prueba</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\Fondo</background>
+    <background>background\Escenario2Back</background>
   </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\TextosFonts</font>
   </fonts>
   <objects name="objects">
-    <object>objects\LuciaObj</object>
-    <object>objects\JoseJavier</object>
-    <object>objects\Corsi</object>
-    <object>objects\Angie</object>
     <object>objects\Salon</object>
     <object>objects\Habitacion1</object>
     <object>objects\Habitacion2</object>
@@ -72,14 +85,29 @@
     <object>objects\Textos</object>
     <object>objects\Caras</object>
     <object>objects\CuadroTextoObj</object>
-    <object>objects\PruebaObj</object>
     <object>objects\SueloObj</object>
-    <object>objects\Seguimiento</object>
+    <object>objects\WarpObj</object>
+    <objects name="Personajes">
+      <object>objects\LuciaObj</object>
+      <object>objects\JoseJavier</object>
+      <object>objects\Seguimiento</object>
+      <object>objects\PruebaObj</object>
+      <object>objects\Corsi</object>
+      <object>objects\Angie</object>
+    </objects>
+    <object>objects\Azotea1</object>
+    <object>objects\Azotea11</object>
+    <object>objects\Azotea2</object>
+    <object>objects\Azotea3</object>
+    <object>objects\Azotea4</object>
+    <object>objects\Azotea5</object>
+    <object>objects\Ciudad1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomPreInicio</room>
     <room>rooms\roomPrueba</room>
     <room>rooms\room0</room>
+    <room>rooms\roomCiudad1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
